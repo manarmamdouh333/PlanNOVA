@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "926939474937",
+    "project_id": "plannova-4b209",
+    "storage_bucket": "plannova-4b209.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926939474937:android:d001f5393675ddf1ceab28",
+        "android_client_info": {
+          "package_name": "com.example.plannova"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc5i_scHa4log258qg_BTGnJ8w5QHtZC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
