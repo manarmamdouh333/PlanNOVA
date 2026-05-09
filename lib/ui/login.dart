@@ -29,8 +29,16 @@ class _LoginScreenState extends State<LoginScreen> {
     final authController = Provider.of<AuthController>(context);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF1F3F6),
-      body: SafeArea(
+  body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+            Color(0xFF2C4356),
+                          Color(0xFF14B8A6),
+            ],
+          ),),child: SafeArea(
         child: Center(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
@@ -226,7 +234,7 @@ else {
                   ),
                 ),
               ),
-            ),
+            ),),
           ),
         ),
       ),

@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:plannova/ui/login.dart';
 import 'package:plannova/ui/rregeneratePLan.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -225,14 +226,24 @@ class ProfileScreen extends StatelessWidget {
                                 () {},
                               ),
 
-                              _actionButton(
-                                Icons.logout_rounded,
-                                "Logout",
-                                () async =>
-                                    await FirebaseAuth.instance
-                                        .signOut(),
-                                color: Colors.redAccent,
-                              ),
+                            _actionButton(
+  Icons.logout_rounded,
+  "Logout",
+  () async {
+    await FirebaseAuth.instance.signOut();
+
+    if (!context.mounted) return;
+
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const LoginScreen(),
+      ),
+      (route) => false,
+    );
+  },
+  color: Colors.redAccent,
+),
                             ],
                           ),
                         );
